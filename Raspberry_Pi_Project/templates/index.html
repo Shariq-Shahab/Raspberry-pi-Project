@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Rod tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='vendor/axios/axios.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </head>
+  <body>
+    <section id="streaming_viewer">
+      <h1 align="center">Rod tracker</h1>
+      <img id="background" class="center" src="{{ url_for('video_feed') }}">
+    </section>
+
+    <section id="actions">
+      <h2>Actions</h2>
+        <div>
+          <!-- Button to update the system's status -->
+          <button onclick="updateStatus()">Update status</button>
+          <!--Button to start the Motor-->
+          <button onclick="requestStartMotor()">Start motor</button>
+           <!-- Button to stop the motor -->
+           <button onclick="requestStoptMotor()">Stop motor</button>
+          
+
+          <!-- 'Start motor' button with corresponding request after clicking -->
+          <!-- Complete here -->
+          <!-- ... -->
+        </div>
+    </div>
+  </section>
+
+  <section id="monitoring_info">
+    <h2>Monitoring information</h2>
+    <!-- HTML elements for 'Motor status' information -->
+
+    <p><b>Motor status:</b><span id="motor"></span></p>
+    <!-- ... -->
+
+    <!-- HTML elements for 'Current colors' information -->
+    <!-- Complete here -->
+    <!-- ... -->
+    <p><b>Current color from Open CV:</b>
+      <b>Blue: </b><span id="blue_open_cv"></span>,
+      <b>Purple: </b><span id="purple_open_cv"></span>,
+      <b>Yellow: </b><span id="yellow_open_cv"></span>,
+      <b>Green: </b><span id="green_open_cv"></span>,
+    </p>
+
+    <p><b>Current color from Distance:</b>
+      <b>Blue: </b><span id="blue_color"></span>,
+      <b>Purple: </b><span id="purple_color"></span>,
+      <b>Yellow: </b><span id="yellow_color"></span>,
+      <b>Green: </b><span id="green_color"></span>,
+    </p>
+
+    
+    
+    <!-- HTML elements for 'Distance' information -->
+    <!-- Complete here -->
+    <!-- ... -->
+    <p><b>Distance: </b><span id="distance"></span><h> cm</h></p>
+
+
+  </section>
+  </body>
+</html>
