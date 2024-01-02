@@ -34,7 +34,7 @@ def get_frames():
 
         ret, buffer = cv2.imencode('.jpg', frame_gen)
         frame = buffer.tobytes()
-        yield (b'--frame\r\n'
+        yield (b'--frame\r\n'      #generates frames using the process_frame() method from opencv_controller and encodes them into JPEG format for video streaming.
                 b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # concat frame one by one and show result
 #       time.sleep(0.5)
 
