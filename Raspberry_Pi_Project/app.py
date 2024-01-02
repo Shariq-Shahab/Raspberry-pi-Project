@@ -9,11 +9,13 @@ from task1_opencv_control.modules.opencv_controller import OpenCVController
 from task2_motor_control.modules.motor_controller import MotorController
 from task3_sensor_control.modules.sensor_controller import SensorController
 
+# Initializing Flask Application and Controllers
 app = Flask(__name__)
 motor_controller = MotorController()
 opencv_controller = OpenCVController()
 sensor_controller = SensorController()
 
+# Routing for Web Interface
 @app.route('/')
 def index():
     """Server view to access the app and display the index template."""
@@ -37,6 +39,7 @@ def get_frames():
 #       time.sleep(0.5)
 
 
+# Route Functions for Web Interface Interactions
 @app.route('/video_feed')
 def video_feed():
     """Server view to access the app and display the index template."""
