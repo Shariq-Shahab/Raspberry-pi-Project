@@ -110,4 +110,5 @@ def get_color_from_distance():
                     "green_color": sensor_controller.get_color_from_distance(),})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, use_reloader=False)
+    app.run(host='0.0.0.0', debug=True, use_reloader=False) 
+    #Starts the Flask application, allowing it to run and listen for incoming requests on the specified host and port.
